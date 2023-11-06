@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html ondblclick="">
+    <head>
+        <title>&reg; Todos los derechos Reservados</title>
+        <!-- <link rel="stylesheet" src="file:///D:/files/Ostwald/JavaScript/Sistema/HTML/%C2%A9OstwaldCorporation.css"  type="text/css"> -->
+        <style>
+            /* Colores */
+
+            .color-dblclick, div:hover, .header-dblclick, .footer-dblclick {
+                background-color: rgb(31, 31, 31);
+                color: rgb(223, 223, 223);
+            }
+
+            html, body, iframe, div, div:active, button {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+            }
+
+            html, body, header, footer {
+                border-color: rgb(223, 223, 223);
+            }
+
+            div {
+                border-color: rgb(255, 255, 255);
+            }
+
+            header, footer {
+                background-color: rgb(63, 63, 63);
+                color: rgb(191, 191, 191);
+            }
+
+            /* Tamaños */
+
+            html, iframe, header, footer {
+                width: 100%;
+            }
+
+            html, .iframe-body {
+                height: 100%;
+            }
+
+            header, footer {
+                height: 20px;
+            }
+
+            body {
+                width: auto; /* width: calc((100vw - 1vw + 0.3vw) - 0.75vw); */
+                height: calc((100vh - 1vh + 0.3vh) - 2.25vh);
+            }
+
+            .iframe-div {
+                height: calc(100% - 40px);
+            }
+
+            .button-div {
+                padding: 20px;
+            }
+
+            /* Ubicacion */
+
+            html, header, iframe, footer {
+                right: 0;
+                left: 0;
+            }
+
+            html, header {
+                top: 0;
+            }
+
+            html, footer {
+                bottom: 0;
+            }
+
+            /* Pocicion */
+
+            body, iframe, div {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+            }
+
+            body {
+                flex-direction: column;
+            }
+
+            header, footer {
+                position: fixed;
+            }
+
+            /* Diseños */
+
+            div, header, footer {
+                border: 1px solid;
+            }
+
+            header, footer {
+                border-radius: 0 0 0 0;
+            }
+
+            .button-div {
+                border-radius: 20px 20px 20px 20px;
+            }
+
+            .iframe-div, button {
+                border: none;
+            }
+        </style>
+    </head>
+    <body ondblclick="">
+        <header>
+            &copy; Ostwald Corporation
+        </header>
+        <!-- <iframe srcdoc=""></iframe> -->
+        <iframe class="iframe-div" src="file:///D:/Files/Ostwald/JavaScript/Sistema/HTML/Menu_Arranque.html"></iframe>
+        <footer>
+            &reg; Todos los derechos Reservados
+        </footer>
+    </body>
+</html>

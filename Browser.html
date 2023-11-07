@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html ondblclick="">
+    <head>
+        <title>Browser</title>
+        <!-- <link rel="stylesheet" src="%C2%A9OstwaldCorporation.css"  type="text/css"> -->
+        <style>
+            /* Colores */
+
+            .color-dblclick, div:hover, .header-dblclick, .footer-dblclick, footer {
+                background-color: rgb(31, 31, 31);
+                color: rgb(223, 223, 223);
+            }
+
+            html, body, iframe, div, div:active, button {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+            }
+
+            html, body, header {
+                border-color: rgb(223, 223, 223);
+            }
+
+            div {
+                border-color: rgb(255, 255, 255);
+            }
+
+            header {
+                background-color: rgb(63, 63, 63);
+                color: rgb(191, 191, 191);
+            }
+
+            footer {
+                border-color: rgb(239, 239, 239);
+            }
+
+            .AlternativeColors {
+                background-color: rgb(15, 15, 15);
+                color: rgb(239, 239, 239);
+                border-color: rgb(247, 247, 247);
+            }
+
+            /* Tamaños */
+
+            html, iframe, header, footer {
+                width: 100%;
+            }
+
+            html, .iframe-body {
+                height: 100%;
+            }
+
+            header, footer {
+                height: 20px;
+            }
+
+            body {
+                width: auto; /* width: calc((100vw - 1vw + 0.3vw) - 0.75vw); */
+                height: calc((100vh - 1vh + 0.3vh) - 2.25vh);
+            }
+
+            .iframe-div {
+                height: calc(100% - 40px);
+            }
+
+            .button-div {
+                padding: 20px;
+            }
+
+            #input1A2 {
+                width: calc(100% - 80px - 80px);
+            }
+
+            /* Ubicacion */
+
+            html, header, iframe, footer {
+                right: 0;
+                left: 0;
+            }
+
+            html, header {
+                top: 0;
+            }
+
+            html, footer {
+                bottom: 0;
+            }
+
+            /* Pocicion */
+
+            body, iframe, div {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+            }
+
+            body {
+                flex-direction: column;
+            }
+
+            header, footer {
+                position: fixed;
+            }
+
+            #input1A2 {
+                text-align: center;
+            }
+
+            /* Diseños */
+
+            div, header, footer {
+                border: 1px solid;
+            }
+
+            header, footer {
+                border-radius: 0 0 0 0;
+            }
+
+            .AlternativeColors {
+                border-radius: 20px 20px 10px 10px;
+            }
+
+            .button-div {
+                border-radius: 20px 20px 20px 20px;
+            }
+
+            .iframe-div, button {
+                border: none;
+            }
+        </style>
+    </head>
+    <body ondblclick="">
+        <script type="text/javascript">
+            var PB1 = "https://ostwald-ro.github.io/Beta/";
+            var PB2 = "file:///media/removable/FILES32/Files/Ostwald/JavaScript/Sistema/HTML/";
+            var PB3 = "file:///D:/Files/Ostwald/JavaScript/Sistema/HTML/";
+
+            var PG1A = "Menu_Arranque";
+            var PG1B = "Browser";
+            var PG2B = "Opciones_Arranque";
+            var PG1C = "Menu_Arranque";
+            var PG2C = "Menu_Arranque";
+            
+            var url1A = PB1 + PG1A;
+            var url1B = PB1 + PG1B;
+            var url2B = PB1 + PG2B;
+            var url1C = PB1 + PG1C;
+            var url2C = PB1 + PG2C;
+
+            var enLinea = true;
+            var enChromeOS = true;
+        
+            function updateURLs() {
+                enLinea = document.getElementById("enLinea").checked;
+                if (enLinea) {
+                    url1A = PB1 + PG1A;
+                    url1B = PB1 + PG1B;
+                    url1C = PB1 + PG1C;
+                    url2C = PB1 + PG2C;
+                } else {
+                    enChromeOS = document.getElementById("enChromeOS").checked;
+                    if (enChromeOS) {
+                        url1A = PB2 + PG1A + ".html";
+                        url1B = PB2 + PG1B + ".html";
+                        url1C = PB2 + PG1C + ".html";
+                        url2C = PB2 + PG2C + ".html";
+                  } else {
+                        url1A = PB3 + PG1A + ".html";
+                        url1B = PB3 + PG1B + ".html";
+                        url1C = PB3 + PG1C + ".html";
+                        url2C = PB3 + PG2C + ".html";
+                  }
+                }
+
+                iframe1A.src = url1A;
+            }
+        
+            function dblclick(x_url) {
+                if (window.innerWidth > window.innerHeight) {
+                  window.location.href = x_url;
+                }
+            }
+        
+            function click(x_url) {
+                if (window.innerWidth < window.innerHeight) {
+                  window.location.href = x_url;
+                }
+            }
+        </script>
+        <header>
+            </header>
+        <iframe id="iframe1A2" class="iframe-div" src="https://youtube.com"></iframe>
+        <footer class="AlternativeColors">
+            <button class="AlternativeColors">Actualizar</button><input id="input1A2" type="search" placeholder="Introducir la URL" class="AlternativeColors"><button class="AlternativeColors">Navegar</button>
+        </footer>
+    </body>
+</html>

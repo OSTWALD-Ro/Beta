@@ -109,9 +109,24 @@
         </style>
     </head>
     <body ondblclick="">
+        <script type="text/javascript">
+            url1 = "file:///D:/Files/Ostwald/JavaScript/Sistema/HTML/Opciones_Arranque.html";
+
+            function dblclick(x_url) {
+                if (window.innerWidth > window.innerHeight) {
+                    window.location.href = x_url;
+                }
+            }
+
+            function click(x_url) {
+                if (window.innerWidth < window.innerHeight) {
+                    window.location.href = x_url;
+                }
+            }
+        </script>
         <!-- <iframe srcdoc=""></iframe> -->
         <!-- <iframe src="file:///D:/Files/Ostwald/JavaScript/Sistema/HTML/Opciones_Arranque.html"></iframe> -->
-        <button ondblclick="window.location.href = 'https://ostwald-ro.github.io/Beta/Opciones_Arranque'">
+        <button onclick="click(url1)" ondblclick="dblclick(url1)">
             <div class="button-div">
                 <h1>Ostwald System</h1>
             </div>

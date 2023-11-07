@@ -1,7 +1,11 @@
 
             var PB1, PB2, PB3;
             var PG1A, PG1B, PG1C, PG2C;
-            var url1A, url1B, url1C, url2C;
+            
+            var url1A = PB1 + PG1A;
+            var url1B = PB1 + PG1B;
+            var url1C = PB1 + PG1C;
+            var url2C = PB1 + PG2C;
 
             var enLinea = true;
             var enChromeOS = true;

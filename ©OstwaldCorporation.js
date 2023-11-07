@@ -1,6 +1,12 @@
 
-            var PB1, PB2, PB3;
-            var PG1A, PG1B, PG1C, PG2C;
+            var PB1 = "https://ostwald-ro.github.io/Beta/";
+            var PB2 = "file:///media/removable/FILES32/Files/Ostwald/JavaScript/Sistema/HTML/";
+            var PB3 = "file:///D:/Files/Ostwald/JavaScript/Sistema/HTML/";
+
+            var PG1A = "Menu_Arranque";
+            var PG1B = "Opciones_Arranque";
+            var PG1C = "Menu_Arranque";
+            var PG2C = "Menu_Arranque";
             
             var url1A = PB1 + PG1A;
             var url1B = PB1 + PG1B;
@@ -9,15 +15,6 @@
 
             var enLinea = true;
             var enChromeOS = true;
-        
-            PB1 = "https://ostwald-ro.github.io/Beta/";
-            PB2 = "file:///media/removable/FILES32/Files/Ostwald/JavaScript/Sistema/HTML/";
-            PB3 = "file:///D:/Files/Ostwald/JavaScript/Sistema/HTML/";
-
-            PG1A = "Menu_Arranque";
-            PG1B = "Opciones_Arranque";
-            PG1C = "Menu_Arranque";
-            PG2C = "Menu_Arranque";
         
             function updateURLs() {
                 enLinea = document.getElementById("enLinea").checked;

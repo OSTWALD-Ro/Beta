@@ -6,7 +6,7 @@
         <style>
             /* Colores */
 
-            .color-dblclick, div:hover, .header-dblclick, .footer-dblclick {
+            .color-dblclick, div:hover, .header-dblclick, .footer-dblclick, footer {
                 background-color: rgb(31, 31, 31);
                 color: rgb(223, 223, 223);
             }
@@ -16,7 +16,7 @@
                 color: rgb(255, 255, 255);
             }
 
-            html, body, header, footer {
+            html, body, header {
                 border-color: rgb(223, 223, 223);
             }
 
@@ -24,9 +24,19 @@
                 border-color: rgb(255, 255, 255);
             }
 
-            header, footer {
+            header {
                 background-color: rgb(63, 63, 63);
                 color: rgb(191, 191, 191);
+            }
+
+            footer {
+                border-color: rgb(239, 239, 239);
+            }
+
+            .AlternativeColors {
+                background-color: rgb(15, 15, 15);
+                color: rgb(239, 239, 239);
+                border-color: rgb(247, 247, 247);
             }
 
             /* Tamaños */
@@ -99,6 +109,10 @@
                 border-radius: 0 0 0 0;
             }
 
+            .AlternativeColors {
+                border-radius: 20px 20px 10px 10px;
+            }
+
             .button-div {
                 border-radius: 20px 20px 20px 20px;
             }
@@ -109,7 +123,63 @@
         </style>
     </head>
     <body ondblclick="">
+        <script type="text/javascript">
+            var PB1, PB2, PB3;
+            var PG1A, PG1B, PG1C, PG2C;
+            var url1A, url1B, url1C, url2C;
+
+            var enLinea;
+            var enChromeOS;
+        
+            PB1 = "https://ostwald-ro.github.io/Beta/";
+            PB2 = "file:///media/removable/FILES32/Files/Ostwald/JavaScript/Sistema/HTML/";
+            PB3 = "file:///D:/Files/Ostwald/JavaScript/Sistema/HTML/";
+
+            PG1A = "Menu_Arranque";
+            PG1B = "Opciones_Arranque";
+            PG1C = "Menu_Arranque";
+            PG2C = "Menu_Arranque";
+        
+            function updateURLs() {
+                enLinea = document.getElementById("enLinea").checked;
+                if (enLinea) {
+                    url1A = PB1 + PG1A;
+                    url1B = PB1 + PG1B;
+                    url1C = PB1 + PG1C;
+                    url2C = PB1 + PG2C;
+                } else {
+                    enChromeOS = document.getElementById("enChromeOS").checked;
+                    if (enChromeOS) {
+                        url1A = PB2 + PG1A + ".html";
+                        url1B = PB2 + PG1B + ".html";
+                        url1C = PB2 + PG1C + ".html";
+                        url2C = PB2 + PG2C + ".html";
+                  } else {
+                        url1A = PB3 + PG1A + ".html";
+                        url1B = PB3 + PG1B + ".html";
+                        url1C = PB3 + PG1C + ".html";
+                        url2C = PB3 + PG2C + ".html";
+                  }
+                }
+
+                iframe1A.src = url1A;
+            }
+        
+            function dblclick(x_url) {
+                if (window.innerWidth > window.innerHeight) {
+                  window.location.href = x_url;
+                }
+            }
+        
+            function click(x_url) {
+                if (window.innerWidth < window.innerHeight) {
+                  window.location.href = x_url;
+                }
+            }
+              
+            updateURLs();
+        </script>
         <!-- <iframe srcdoc=""></iframe> -->
-        <iframe class="iframe-body" src="file:///D:/files/Ostwald/JavaScript/Sistema/HTML/%C2%AETodosLosDerechosReservados.html" onerror="this.src = 'https://ostwald-ro.github.io/Beta/%C2%AETodosLosDerechosReservados'"></iframe>
+        <iframe id="iframe1A" class="iframe-body" src="file:///media/removable/FILES32/Files/Ostwald/JavaScript/Sistema/HTML/%C2%AETodosLosDerechosReservados.html" onerror="this.src = 'https://ostwald-ro.github.io/Beta/%C2%AETodosLosDerechosReservados'"></iframe>
     </body>
 </html>

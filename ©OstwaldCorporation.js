@@ -55,5 +55,3 @@
                   window.location.href = x_url;
                 }
             }
-              
-            updateURLs();

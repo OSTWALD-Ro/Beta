@@ -73,7 +73,7 @@
             }
 
             #input1A2 {
-                width: calc(100% - (80px * 5));
+                width: calc(100% - (80px * 7.5));
             }
 
             /* Ubicacion */
@@ -202,7 +202,7 @@
         </header>
         <iframe id="iframe1A2" class="iframe-div" src="https://ostwald-ro.github.io/Beta/DuckDuckGo.com"></iframe>
         <footer class="AlternativeColors">
-            <button class="AlternativeColors">Regresar al Menú</button> | <button class="AlternativeColors">Página Principal</button><input id="input1A2" type="search" placeholder="Introducir la URL" class="AlternativeColors" value="https://ostwald-ro.github.io/Beta/DuckDuckGo.com"><button class="AlternativeColors">Actualizar</button> | <button class="AlternativeColors">Navegar</button>
+            <button class="AlternativeColors" onclick="window.location.href='https://ostwald-ro.github.io/Beta/Menu_Arranque'">Regresar al Menú</button>| [<input type="checkbox" id="enLinea" checked onchange="updateURLs()"> Line] | [<input type="checkbox" id="enChromeOS" checked onchange="updateURLs()"> ChromeOS] <input id="input1A2" type="search" placeholder="Introducir la URL" class="AlternativeColors" value="https://ostwald-ro.github.io/Beta/DuckDuckGo.com"><button class="AlternativeColors"  onclick="window.location.href='https://ostwald-ro.github.io/Beta/DuckDuckGo.com'">Página Principal</button> | <button class="AlternativeColors">Actualizar</button> | <button class="AlternativeColors">Navegar</button>
         </footer>
     </body>
 </html>

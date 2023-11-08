@@ -39,6 +39,12 @@
                 border-color: rgb(247, 247, 247);
             }
 
+            #input-with-image {
+                background: url('https://ostwald-ro.github.io/Beta/lupa.png') no-repeat;
+                background-size: 30px 30px; /* Ajusta el tamaño de la imagen según tus necesidades */
+                padding: 8px 0 8px 30px;
+            }
+
             /* Tamaños */
 
             html, iframe, header, footer {
@@ -87,7 +93,7 @@
 
             /* Pocicion */
 
-            body, iframe, div {
+            body, iframe, div, .center {
                 display: flex;
                 text-align: center;
                 align-items: center;
@@ -188,13 +194,13 @@
                 }
             }
         </script>
-        <header>
-        </header>
         <form name="x" action="https://duckduckgo.com/" method="post">
-            <input name="q" autocomplete="off" type="text" autofocus="" placeholder="Busca en la red sin que te rastreen">
-            <br><input name="b" value="Buscar en DuckDuckGo" title="Search" alt="Search" type="submit">
-        </form>
-        <footer class="AlternativeColors">
-        </footer>
+            <img src="https://ostwald-ro.github.io/Beta/DuckDuckGo.svg" width="" height="auto">
+            <br><br><br>
+            <div style="width:200%">
+                <input name="q" style="width:100%; height:30px" autocomplete="off" type="text" autofocus="" placeholder="Busca en la red sin que te rastreen">
+                <input name="b" id="input-with-image" value="" title="Search" alt="Search" type="submit">
+            </div>
+         </form>
     </body>
 </html>

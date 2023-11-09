@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Consola de Comandos</title>
+        <style>
+            html {
+                /* border: solid; */
+                border-color: transparent; /* border-color: rgb(191, 191, 191); */
+                box-shadow: none;/* box-shadow: 0 0 1.5vh rgb(191, 191, 191); */
+                /* height: calc(100vh - 0.65vw + 0.3vh - 0px); */
+                /* width: calc(100vw - 1vh - 1.5vh); */
+            }
+
+            html, body {
+                border: none; 
+                background-color: rgb(0, 0, 0);
+                color: rgb(191, 191, 191);
+                min-height: 90%;
+                height: auto;
+                min-width: 90%;
+                width: auto;
+            }
+
+            body {
+                overflow-y: scroll; /* overflow: scroll; */
+            }
+
+            label {
+                margin-right: none; /* margin-right: 10pt; */
+            }
+
+            label, input {
+                background-color: transparent;
+                color: rgb(191, 191, 191);
+                min-width: 90%;
+                text-align: left;
+            }
+
+            input {
+                border: none;
+                /* width: calc(100vw - 6vw - 1.5vh); */
+                resize: none;
+                outline: none;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <label id="console-body" style="white-space: pre-line;">Ostwald Program [Versi&oacute;n 2023.10.07.00.53]
+                (c) Ostwald Corporation. Todos los derechos reservados.
+                
+                Ostwald:/> ¿En Qué Puedo Servirle?
+                
+            </label>
+            <span>Yo:/> </span>
+            <input id="console-input" style="white-space: pre-line;" type="text" placeholder=" Favor de Introducir Su Petición y Presionar Enter Para Continuar"></input>
+        </div>
+        <script>
+            const inputElement = document.getElementById('console-input');
+            const outputElement = document.getElementById('console-body');
+    
+            inputElement.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' && inputElement.value !== '') {
+                    event.preventDefault();
+                    const command = inputElement.value;
+                    inputElement.value = '';
+    
+    
+                    // Agrega el comando y la respuesta con saltos de línea
+                    outputElement.textContent = (outputElement.textContent + "Yo:/> " + command + "\n" + "Ostwald:/> " + executeCommand(command) + "\n\n");
+                        
+                    outputElement.scrollTop = outputElement.scrollHeight;
+                }
+            });
+    
+            function executeCommand(command) {
+                // Aquí puedes definir la lógica para ejecutar comandos
+                if (
+                    command.toLowerCase() === 'ostwald'
+                ) {
+                    return 'Mande Usted, Estoy a Su Servicio';
+                } else if (
+                    command.toLowerCase() === 'actualizar' || command.toLowerCase() === 'actualisar' ||
+                    command.toLowerCase() === 'actualizate' || command.toLowerCase() === 'actualisate'
+                ) {
+                    location.reload(true);
+                    return 'Actualizando';
+                } else if (
+                    command.toLowerCase() === 'abrir'
+                ) {
+                    return 'Abriendo "';
+                } else if (
+                    command.toLowerCase() === 'hola' || command.toLowerCase() === 'ola'
+                ) {
+                    return 'Hola Soy Ostwald, ¿En Qué Puedo Servirle?';
+                } else if (command.toLowerCase() === 'salir' || command.toLowerCase() === 'cerrar') {
+                    // if (confirm('¿Estás seguro de que deseas ' + command.toLowerCase() + '?')) {
+                    window.close();
+                    return 'Disculpe Usted, se ha Provocado un Error, El Navegador Actual No Permite ' + command.toLowerCase();
+                    /* } else {
+                        return "Petición '" + command.toLowerCase() + "' Cancelada";
+                    }
+                    */
+                } else {
+                    return `Disculpe Usted, se ha Provocado un Error, Su Petición "` + command + `" no la Puedo Entender`;
+                }
+            }
+        </script>
+    </body>    
+</html>
